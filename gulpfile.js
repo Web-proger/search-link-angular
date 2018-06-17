@@ -7,13 +7,14 @@ const preproc = require('gulp-sass');
 
 const config = {
   src: './src',
+  app: './src/app',
   css: {
     watch: '/precss/**/*.scss',
     src: '/precss/styles.scss',
-    dest: '/css'
+    dest: '/app'
   },
   html: {
-    src: '/index.html'
+    src: '/app/index.html'
   },
   js: {
     src: '/js/**/*.js'
@@ -46,7 +47,9 @@ gulp.task('watch', ['browserSync'], function () {
 gulp.task('browserSync', function () {
   browserSync.init({
     server: {
-      baseDir: config.src
+      baseDir: config.app
     }
   });
 });
+
+console.log(config.src + config.css.watch, config.src + config.html.src);
