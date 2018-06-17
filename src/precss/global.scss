@@ -1,0 +1,54 @@
+// медиа
+$m-sm: "screen and (max-width: 740px)";
+$m_middle: "screen and (max-width: 600px)";
+$m_xs: "screen and (max-width: 480px)";
+
+* {
+  transition: all 0.3s ease;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+html {
+  box-sizing: border-box;
+}
+.content-box-component {
+  box-sizing: content-box;
+}
+
+body {
+  margin: 0;
+  background: #FFFFFF;
+  font-family: Tahoma, Verdana, sans-serif;
+}
+
+.container {
+  text-align: center;
+  max-width: 1300px;
+  min-width: 320px;
+  margin: 0 auto;
+}
+
+figure {
+  img {
+    max-width: 100%;
+    vertical-align: top;
+  }
+}
+
+.clearfix:after, .clearfix:before {
+  content: " ";
+  display: table;
+  clear: both;
+}
+
+.main {
+  background-color: #FFFFFF;
+}
+
+@mixin ul-style() {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}

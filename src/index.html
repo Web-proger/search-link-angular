@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width">
+  <title></title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<form id="main-form" action="">
+  <fieldset>
+    <legend> Введите список доменов </legend>
+    <textarea class="site-input" id="site-input" name="site-items" cols="30" rows="20"></textarea>
+    <br>
+    <button class="btn" id="btn-transorm" type="button">Преобразовать</button>
+    <button id="clear-form" class="btn clear-form" type="button">Очистить список</button>
+  </fieldset>
+  <fieldset>
+    <legend> Финальный список </legend>
+    <textarea class="ta-output" id="ta-output" name="site-items" cols="30" rows="20"></textarea>
+    <button class="btn" id="btn-print" type="button">Вывести финальный список</button>
+  </fieldset>
+</form>
+<section id="site-output" class="site-list"></section>
+</body>
+</html>

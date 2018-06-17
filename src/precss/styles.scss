@@ -1,0 +1,63 @@
+@import './global';
+
+fieldset {
+  display: inline-block;
+  vertical-align: top;
+  width: 45%;
+  min-width: 300px;
+}
+
+.site-input {
+  width: 100%;
+}
+
+.ta-output {
+  width: 100%;
+}
+
+.btn {
+  margin: 3px 5px;
+  padding: 5px 10px;
+  background-color: #000000;
+  color: #ffffff;
+  border-radius: 5px;
+  cursor: pointer;
+  border: none;
+  &:hover {
+    box-shadow: 0 0 10px 2px #3e3a36;
+  }
+}
+
+.link-wrap {
+  display: inline-block;
+  width: 240px;
+  vertical-align: top;
+  border: 1px solid black;
+  padding: 5px;
+  margin: 5px;
+  text-align: center;
+}
+
+.link-wrap-header {
+  margin: 8px;
+}
+
+.site-link {
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 5px;
+  text-decoration: none;
+  padding: 5px 10px;
+  background-color: #000000;
+  color: #ffffff;
+  &:hover {
+    background-color: #93aac4;
+  }
+}
+
+.del-btn {
+  width: 30%;
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
