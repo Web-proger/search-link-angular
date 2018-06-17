@@ -11,27 +11,28 @@
 <form id="main-form" action="">
   <fieldset>
     <legend> Введите список доменов </legend>
-    <textarea class="site-input" id="site-input" name="site-items" cols="30" rows="20"></textarea>
+    <textarea class="site-input" name="site-items" cols="30" rows="20" ng-model="data"></textarea>
     <br>
-    <button class="btn" id="btn-transorm" type="button">Преобразовать</button>
-    <button id="clear-form" class="btn clear-form" type="button">Очистить список</button>
+    <button class="btn" type="button" ng-click="getData()">Преобразовать</button>
+    <button class="btn clear-form" type="button" ng-click="clearDomainList()">Очистить список</button>
   </fieldset>
   <fieldset>
     <legend> Финальный список </legend>
-    <textarea class="ta-output" id="ta-output" name="site-items" cols="30" rows="20"></textarea>
-    <button class="btn" id="btn-print" type="button">Вывести финальный список</button>
+    <textarea class="ta-output" name="site-items" cols="30" rows="20" ng-model="finalList"></textarea>
+    <button class="btn" type="button" ng-click="printFinalList()">Вывести финальный список</button>
   </fieldset>
 </form>
-<section id="site-output" class="site-list"></section>
-
-<div ng-repeat="word in array">{{word}}</div>
-
-<table>
-  <tr><th>Row number</th></tr>
-  <tr ng-repeat="i in [0, 1, 2, 3, 4, 5, 6, 7]">
-    <td ng-repeat="i in [0, 1, 2, 3, 4, 5, 6, 7]">{{i+1}}</td>
-  </tr>
-</table>
+<section class="site-list">
+    <div class="link-wrap" ng-repeat="domain in array">
+        <h4 class="link-wrap-header">{{ domain }}</h4>
+        <a target="_blank" class="site-link" href="https://yandex.ru/yandsearch?s=all&text=host%3Awww.{{ domain }}%20%7C%20host%3A{{ domain }}">yandex</a>
+        <a target="_blank" class="site-link" href="https://www.google.ru/search?newwindow=1&safe=off&q=site:{{ domain }}&cad=h">google</a>
+        <a target="_blank" class="site-link" href="https://go.mail.ru/search?site={{ domain }}&advs=1&q={{ domain }}">mail</a>
+        <br>
+        <button class="btn btn-status" data-status="not-check">status</button>
+        <button class="btn del-btn" type="button" ng-click="removeDomain(domain)">Удалить</button>
+    </div>
+</section>
 
 <script src="app.js"></script>
 </body>
