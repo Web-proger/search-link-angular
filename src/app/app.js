@@ -17,4 +17,15 @@ searchlinkApp.controller('SearchLinkController', function SearchLinkController($
   $scope.removeDomain = function (domain) {
       $scope.array.splice([$scope.array.indexOf(domain)], 1);
   };
+  $scope.changeStatus = function (event) {
+    var parent = event.target.parentNode;
+    if (parent.classList.contains('red')) {
+      parent.classList.remove('red');
+      parent.classList.add('green')
+    } else if (parent.classList.contains('green')) {
+      parent.classList.remove('green');
+    } else {
+      parent.classList.add('red')
+    }
+  }
 });

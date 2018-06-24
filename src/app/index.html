@@ -29,7 +29,7 @@
         <a target="_blank" class="site-link" href="https://www.google.ru/search?newwindow=1&safe=off&q=site:{{ domain }}&cad=h">google</a>
         <a target="_blank" class="site-link" href="https://go.mail.ru/search?site={{ domain }}&advs=1&q={{ domain }}">mail</a>
         <br>
-        <button class="btn btn-status" data-status="not-check">status</button>
+        <button id="status" class="btn btn-status" data-status="not-check" ng-click="changeStatus($event)" ng-class="{{ status }}">status</button>
         <button class="btn del-btn" type="button" ng-click="removeDomain(domain)">Удалить</button>
     </div>
 </section>
