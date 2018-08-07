@@ -2,7 +2,13 @@ var searchlinkApp =  angular.module('searchlinkApp');
 
 searchlinkApp.controller('SearchLinkController', function SearchLinkController($scope) {
   $scope.getData = function () {
-    $scope.array = $scope.data.split('\n');
+    if ($scope.data) {
+        $scope.array = $scope.data.split('\n');
+        $scope.message = '';
+    } else {
+      console.log('Введите список доменов');
+      $scope.message = 'Введите список доменов';
+    }
   };
 
   $scope.clearDomainList = function () {
