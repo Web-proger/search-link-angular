@@ -22,18 +22,12 @@
     <button class="btn" type="button" ng-click="printFinalList()">Вывести финальный список</button>
   </fieldset>
 </form>
-<section class="site-list">
-    <div class="link-wrap" ng-repeat="domain in array">
-        <h4 class="link-wrap-header">{{ domain }}</h4>
-        <a target="_blank" class="site-link" href="https://yandex.ru/yandsearch?s=all&text=host%3Awww.{{ domain }}%20%7C%20host%3A{{ domain }}">yandex</a>
-        <a target="_blank" class="site-link" href="https://www.google.ru/search?newwindow=1&safe=off&q=site:{{ domain }}&cad=h">google</a>
-        <a target="_blank" class="site-link" href="https://go.mail.ru/search?site={{ domain }}&advs=1&q={{ domain }}">mail</a>
-        <br>
-        <button id="status" class="btn btn-status" data-status="not-check" ng-click="changeStatus($event)" ng-class="{{ status }}">status</button>
-        <button class="btn del-btn" type="button" ng-click="removeDomain(domain)">Удалить</button>
-    </div>
+<section class="site-list" search-link>
+
 </section>
 
 <script src="app.js"></script>
+<script src="search-link/search-link.controller.js"></script>
+<script src="search-link/search-link.directive.js"></script>
 </body>
 </html>
