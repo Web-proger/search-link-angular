@@ -24,7 +24,7 @@
 </form>
 <h4 ng-if="message" class="warn-message">{{message}}</h4>
 <section class="site-list">
-  <div class="link-wrap" ng-repeat="domain in array" search-link domainname="{{domain}}"></div>
+  <div class="link-wrap" ng-repeat="domain in array" search-link domainname="{{ domain}}" removedomain="removeDomain(domain)"></div>
 </section>
 
 <script src="app.js"></script>
