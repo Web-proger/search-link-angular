@@ -1,6 +1,7 @@
 var searchlinkApp =  angular.module('searchlinkApp');
 
 searchlinkApp.controller('SearchLinkController', function SearchLinkController($scope) {
+  $scope.advancedBtn = false;
   $scope.getData = function () {
     if ($scope.data) {
         $scope.array = $scope.data.split('\n');

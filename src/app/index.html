@@ -20,11 +20,15 @@
     <legend> Финальный список </legend>
     <textarea class="ta-output" name="site-items" cols="30" rows="20" ng-model="finalList"></textarea>
     <button class="btn" type="button" ng-click="printFinalList()">Вывести финальный список</button>
+    <label>
+      дополнительные опции
+      <input type="checkbox" ng-model="advancedBtn">
+    </label>
   </fieldset>
 </form>
 <h4 ng-if="message" class="warn-message">{{message}}</h4>
 <section class="site-list">
-  <div class="link-wrap" ng-repeat="domain in array" search-link domainname="{{ domain}}" removedomain="removeDomain(domain)"></div>
+  <div class="link-wrap" ng-repeat="domain in array" search-link domainname="{{ domain}}" removedomain="removeDomain(domain)" advanced-btn="advancedBtn"></div>
 </section>
 
 <script src="app.js"></script>

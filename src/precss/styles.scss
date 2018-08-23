@@ -15,6 +15,28 @@ fieldset {
   width: 100%;
 }
 
+.site-link {
+  display: inline-block;
+  vertical-align: top;
+  text-decoration: none;
+  padding: 5px;
+  margin: 4px 2.5px;
+  background-color: #000000;
+  color: #ffffff;
+  &:hover {
+    background-color: #93aac4;
+  }
+}
+
+.red {
+  background-color: rgb(245, 223, 222);
+}
+
+.green {
+  background-color: rgb(207, 239, 207);
+}
+
+
 .btn {
   margin: 3px 5px;
   padding: 5px 10px;
@@ -26,6 +48,23 @@ fieldset {
   &:hover {
     box-shadow: 0 0 10px 2px #3e3a36;
   }
+  &--status {
+    background-color: green;
+  }
+  &--del {
+    width: 30%;
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    background-color: orange;
+  }
+  &--hide {
+    display: none;
+  }
+  &--show {
+    display: inline-block;
+  }
+
 }
 
 .link-wrap {
@@ -40,34 +79,6 @@ fieldset {
 
 .link-wrap-header {
   margin: 8px;
-}
-
-.site-link {
-  display: inline-block;
-  vertical-align: top;
-  margin-right: 5px;
-  text-decoration: none;
-  padding: 5px 10px;
-  background-color: #000000;
-  color: #ffffff;
-  &:hover {
-    background-color: #93aac4;
-  }
-}
-
-.del-btn {
-  width: 30%;
-  margin: 0 auto;
-  margin-top: 20px;
-  margin-bottom: 10px;
-}
-
-.red {
-  background-color: rgb(245, 223, 222);
-}
-
-.green {
-  background-color: rgb(207, 239, 207);
 }
 
 .warn-message {
