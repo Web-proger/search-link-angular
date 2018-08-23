@@ -6,7 +6,13 @@ searchlinkApp.directive('searchLink', function () {
       domain: '@domainname',
       removeDomain: '&removedomain'
     },
-    templateUrl: ('search-link/search-link.template.html'),
+    template: '<h4 class="link-wrap-header">{{ domain }}</h4>\n' +
+    '<a target="_blank" class="site-link" href="{{yandex}}">yandex</a>\n' +
+    '<a target="_blank" class="site-link" href="{{google}}">google</a>\n' +
+    '<a target="_blank" class="site-link" href="{{mail}}">mail</a>\n' +
+    '<br>\n' +
+    '<button id="status" class="btn btn-status" data-status="not-check" ng-click="changeStatus($event)" ng-class="{{ status }}">status</button>\n' +
+    '<button class="btn del-btn" type="button" ng-click="removeDomain()">Удалить</button>',
     link: function (scope, element, attr) {
       //scope.removeDomain();
       scope.yandex = 'https://yandex.ru/yandsearch?s=all&text=host%3Awww.' + scope.domain + '%20%7C%20host%3A' + scope.domain;
