@@ -15,8 +15,7 @@ searchlinkApp.directive('searchLink', function () {
     '<a target="_blank" class="site-link" ng-show="advancedBtn" href="{{googleRefer}}">google ref</a>\n' +
     '<br>\n' +
     '<button id="status" class="btn btn--status" data-status="not-check" ng-click="changeStatus($event)" ng-class="{{ status }}">status</button>\n' +
-    '<button class="btn btn--del" type="button" ng-click="removeDomain()">Удалить</button>\n' +
-    '<div>{{ advancedBtn }}</div>',
+    '<button class="btn btn--del" type="button" ng-click="removeDomain()">Удалить</button>\n',
     link: function (scope, element, attr) {
       //scope.removeDomain();
       scope.yandex = 'https://yandex.ru/yandsearch?s=all&text=host%3Awww.' + scope.domain + '%20%7C%20host%3A' + scope.domain;
